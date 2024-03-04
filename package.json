@@ -1,0 +1,24 @@
+{
+  "name": "bun-app-template",
+  "type": "module",
+  "scripts": {
+    "app": "bun run src/bin/app.ts | pino-pretty",
+    "format": "prettier --write ."
+  },
+  "bun-create": {
+    "preinstall": "echo 'Installing template...'",
+    "postinstall": "echo 'Done!'",
+    "start": "bun app"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3.2.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "pino": "^8.19.0",
+    "pino-pretty": "^10.3.1"
+  }
+}
